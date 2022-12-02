@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes} from "react-router-dom";
+import "./App.css";
+import Home from "./Pages/Home";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
+import jwtDecode from "jwt-decode";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [crruntUser, setcrruntUser] = useState(null)
+
+
+  function decodeToken() {
+    let decodeToken = jwtDecode(localStorage.getItem("userToken"));
+    setcrruntUser(decodeToken);
+  }
+
+  useEffect(() => {
+    if (localStorage.getItem("userToken") != null) {
+      decodeToken();
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Login decodeToken={decodeToken} />} />
+        <Route path="/login" element={<Login decodeToken={decodeToken} />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/nexisltd" element={<Signup />} />
+      </Routes>
+    </>
   );
 }
 
