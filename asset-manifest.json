@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/nexisltd/static/css/main.33116713.css",
+    "main.js": "/nexisltd/static/js/main.0fa34646.js",
+    "static/js/787.a135ec07.chunk.js": "/nexisltd/static/js/787.a135ec07.chunk.js",
+    "static/media/istockphoto.png": "/nexisltd/static/media/istockphoto.8d10a9dba8d5b1bd59d9.png",
+    "index.html": "/nexisltd/index.html",
+    "main.33116713.css.map": "/nexisltd/static/css/main.33116713.css.map",
+    "main.0fa34646.js.map": "/nexisltd/static/js/main.0fa34646.js.map",
+    "787.a135ec07.chunk.js.map": "/nexisltd/static/js/787.a135ec07.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33116713.css",
+    "static/js/main.0fa34646.js"
+  ]
+}
